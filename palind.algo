@@ -1,0 +1,26 @@
+ALGORITHM palindrome
+VAR
+    s : STRING;
+BEGIN
+ s:=palindrome(s); 
+END
+
+
+
+
+FUNCTION palindrome(var s:INTEGER) : BOOLEAN;
+VAR
+    s:string;
+    
+BEGIN
+    IF (length.s<=1) THEN
+        return TRUE
+    END_IF
+
+    IF (s[1]=s[length.s]) THEN
+        palindrome(Copy (s , 2 , length.s-1))
+    ELSE
+        return FALSE
+    END_IF
+
+END
